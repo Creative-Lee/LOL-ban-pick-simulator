@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
-import { transparencyImg } from '../../../../Assets/img/import_img'
-import { SummonerCardContext } from '../..'
+import React, { useContext } from 'react';
+import { transparencyImg } from '../../../../Assets/img/import_img';
+import { SummonerCardContext } from '../..';
 export default function SummonerSpell({ teamColor, summoner, index }) {
   const {
     currentSelectingTeam,
@@ -14,18 +14,18 @@ export default function SummonerSpell({ teamColor, summoner, index }) {
     setCurrentSelectingTeam,
     setPickBanPhase,
     setGlobalPhase,
-  } = useContext(SummonerCardContext)
+  } = useContext(SummonerCardContext);
   return (
-    <div className='summoner__spell-wrap'>
+    <div className="summoner__spell-wrap">
       <img
-        className='summoner__spell'
+        className="summoner__spell"
         alt={`spell1-${summoner.spell1.data}`}
         onClick={() => {
-          setCurrentSelectingSpellNumber(1)
-          setCurrentSelectingIndex(index)
-          setCurrentSelectingTeam(teamColor)
-          setPickBanPhase('Spell')
-          setGlobalPhase('PickBan')
+          setCurrentSelectingSpellNumber(1);
+          setCurrentSelectingIndex(index);
+          setCurrentSelectingTeam(teamColor);
+          setPickBanPhase('Spell');
+          setGlobalPhase('PickBan');
         }}
         data-current-target={
           currentSelectingTeam === teamColor &&
@@ -36,18 +36,20 @@ export default function SummonerSpell({ teamColor, summoner, index }) {
         src={
           summoner.spell1.data === ''
             ? transparencyImg
-            : `${process.env.REACT_APP_API_BASE_URL}/cdn/${recentVersion}/img/spell/${summoner.spell1.data}.png`
+            : `${import.meta.env.VITE_API_BASE_URL}cdn/${recentVersion}/img/spell/${
+                summoner.spell1.data
+              }.png`
         }
       />
       <img
-        className='summoner__spell'
+        className="summoner__spell"
         alt={`spell2-${summoner.spell2.data}`}
         onClick={() => {
-          setCurrentSelectingSpellNumber(2)
-          setCurrentSelectingIndex(index)
-          setCurrentSelectingTeam(teamColor)
-          setPickBanPhase('Spell')
-          setGlobalPhase('PickBan')
+          setCurrentSelectingSpellNumber(2);
+          setCurrentSelectingIndex(index);
+          setCurrentSelectingTeam(teamColor);
+          setPickBanPhase('Spell');
+          setGlobalPhase('PickBan');
         }}
         data-current-target={
           currentSelectingTeam === teamColor &&
@@ -58,9 +60,11 @@ export default function SummonerSpell({ teamColor, summoner, index }) {
         src={
           summoner.spell2.data === ''
             ? transparencyImg
-            : `${process.env.REACT_APP_API_BASE_URL}/cdn/${recentVersion}/img/spell/${summoner.spell2.data}.png`
+            : `${import.meta.env.VITE_API_BASE_URL}cdn/${recentVersion}/img/spell/${
+                summoner.spell2.data
+              }.png`
         }
       />
     </div>
-  )
+  );
 }

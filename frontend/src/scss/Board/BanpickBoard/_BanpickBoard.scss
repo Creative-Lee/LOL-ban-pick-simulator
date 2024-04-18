@@ -1,9 +1,9 @@
-@import "./BanChampCard/_BanChampCard";
-@import "./MatchInfo/_MatchInfo";
-@import "./MatchResult/_MatchResult";
-@import "./SelectBoard/_SelectBoard";
-@import "./SummonerCard/_SummonerCard";
-@import "./TeamSelectMenu/_TeamSelectMenu";
+@import './BanChampCard/_BanChampCard';
+@import './MatchInfo/_MatchInfo';
+@import './MatchResult/_MatchResult';
+@import './SelectBoard/_SelectBoard';
+@import './SummonerCard/_SummonerCard';
+@import './TeamSelectMenu/_TeamSelectMenu';
 
 .ban-pick-board {
   position: relative;
@@ -12,14 +12,14 @@
   flex-direction: column;
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: url(../../../Assets/img/css_url_img/board_background.jpg);
+    background-image: url(Assets/img/css_url_img/board_background.jpg);
     background-size: cover;
     opacity: 1;
     z-index: 0;
@@ -32,7 +32,7 @@
   height: 12vh;
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     top: 0;
@@ -154,7 +154,7 @@
       background-color: #6e83f81c;
       transform: skewX(10deg);
 
-      &[data-current-target="true"] {
+      &[data-current-target='true'] {
         border-top: solid 3px rgb(85, 85, 255);
       }
 
@@ -177,7 +177,7 @@
       background-color: #f86e6e1c;
       transform: skewX(-10deg);
 
-      &[data-current-target="true"] {
+      &[data-current-target='true'] {
         border-top: solid 3px rgb(255, 85, 85);
       }
 
