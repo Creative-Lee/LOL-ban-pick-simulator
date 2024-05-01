@@ -7,7 +7,7 @@ export default function Header({ recentVersion }) {
     <header className="header">
       <Container id="header-container" className="header-container">
         <Link to="/" className="logo-wrap">
-          <img className="logo" alt="logo" src={`/assets/team_logo/KDF.png`} />
+          <img className="logo" alt="logo" src={`/assets/team_logo/KDF.webp`} />
         </Link>
         <Link to="/board">Ban-Pick</Link>
         <Link to="/analysis">Match analysis</Link>
