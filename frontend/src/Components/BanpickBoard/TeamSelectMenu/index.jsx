@@ -14,7 +14,7 @@ const TeamSelectMenu = ({ teamColor, teamName, setTeamName }) => {
   };
   const inlineStyle = teamColor === 'blue' ? {} : redTeamInlineStyle;
 
-  const teamArr = ['KDF', 'T1', 'DK', 'BRO', 'DRX', 'GEN', 'HLE', 'KT', 'LSB', 'NS'];
+  const teamArr = ['KDF', 'T1', 'DK', 'BRO', 'DRX', 'GEN', 'HLE', 'KT', 'FEARX', 'NS'];
 
   const toggleIsTeamSelectMenuOpen = (teamColor) => {
     setIsTeamSelectMenuOpen((prevState) => ({
@@ -54,7 +54,7 @@ const TeamSelectMenu = ({ teamColor, teamName, setTeamName }) => {
                   setTeamName(team);
                 }}
               >
-                <img className="option__logo" alt="logo" src={`/assets/team_logo/${team}.png`} />
+                <img className="option__logo" alt="logo" src={`/assets/team_logo/${team}.webp`} />
                 <span className="option__span">{team}</span>
               </li>
             ))}
@@ -67,7 +67,7 @@ const TeamSelectMenu = ({ teamColor, teamName, setTeamName }) => {
           src={
             teamName === 'Blue' || teamName === 'Red'
               ? transparencyImg
-              : `/assets/team_logo/${teamName}.png`
+              : `/assets/team_logo/${teamName}.webp`
           }
         />
       </div>
