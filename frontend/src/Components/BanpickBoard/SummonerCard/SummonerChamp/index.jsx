@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
-import { transparencyImg } from '../../../../Assets/img/import_img'
-import { SummonerCardContext } from '../../index'
+import React, { useContext } from 'react';
+import { transparencyImg } from '../../../../Assets/img/import_img';
+import { SummonerCardContext } from '../../index';
 
 export default function SummonerChamp({ teamColor, summoner, index }) {
   const {
@@ -11,10 +11,10 @@ export default function SummonerChamp({ teamColor, summoner, index }) {
     setPickBanPhase,
     setGlobalPhase,
     currentSelectingTeam,
-  } = useContext(SummonerCardContext)
+  } = useContext(SummonerCardContext);
   return (
     <img
-      className='summoner__champ'
+      className="summoner__champ"
       id={`${summoner.pickedChampion.data}`}
       alt={`${teamColor}Team-${index}-picked-${summoner.pickedChampion.data}`}
       data-current-target={
@@ -23,16 +23,18 @@ export default function SummonerChamp({ teamColor, summoner, index }) {
         pickBanPhase === 'Pick'
       }
       onClick={() => {
-        setCurrentSelectingIndex(index)
-        setCurrentSelectingTeam(teamColor)
-        setPickBanPhase('Pick')
-        setGlobalPhase('PickBan')
+        setCurrentSelectingIndex(index);
+        setCurrentSelectingTeam(teamColor);
+        setPickBanPhase('Pick');
+        setGlobalPhase('PickBan');
       }}
       src={
         summoner.pickedChampion.data === ''
           ? transparencyImg
-          : `${process.env.REACT_APP_API_BASE_URL}/cdn/img/champion/splash/${summoner.pickedChampion.data}_0.jpg`
+          : `${import.meta.env.VITE_API_BASE_URL}cdn/img/champion/splash/${
+              summoner.pickedChampion.data
+            }_0.jpg`
       }
     />
-  )
+  );
 }
