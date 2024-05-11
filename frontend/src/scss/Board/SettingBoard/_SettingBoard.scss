@@ -1,4 +1,4 @@
-@import "./RadioBox/_RadioBox";
+@import './RadioBox/_RadioBox';
 
 .setting-container {
   position: relative;
@@ -11,14 +11,14 @@
   min-height: 80vh;
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: url(../../../Assets/img/css_url_img/setting_background.png);
+    background-image: url(Assets/img/css_url_img/setting_background.png);
     background-size: cover;
     filter: brightness(0.5);
     opacity: 1;

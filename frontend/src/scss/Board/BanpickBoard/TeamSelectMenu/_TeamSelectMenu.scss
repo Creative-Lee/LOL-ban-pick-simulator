@@ -62,7 +62,8 @@
   }
 
   .team__logo {
-    height: 100%;
+    width: 100px;
+    aspect-ratio: 1 / 1;
 
     .logo {
       width: 100%;
