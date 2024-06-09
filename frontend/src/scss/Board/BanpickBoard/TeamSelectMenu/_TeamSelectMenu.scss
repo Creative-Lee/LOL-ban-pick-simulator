@@ -29,16 +29,9 @@
       background-color: transparent;
       border: none;
     }
-    .name__select {
-      position: absolute;
-      right: 20%;
-      top: 100%;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
 
+    .name__select__chn,
+    .name__select {
       .name__option {
         display: flex;
         align-items: center;
@@ -49,7 +42,8 @@
         }
 
         .option__logo {
-          width: 40%;
+          width: 50px;
+          height: 40px;
           padding: 0.5vw;
         }
 
@@ -58,6 +52,28 @@
           font-size: 1.5vw;
         }
       }
+    }
+
+    .name__select {
+      position: absolute;
+      right: 20%;
+      top: 100%;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background-color: rgb(51, 51, 51);
+    }
+
+    .name__select__chn {
+      position: absolute;
+      right: -80%;
+      top: 100%;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background-color: rgba(63, 63, 63, 0.95);
     }
   }
 
